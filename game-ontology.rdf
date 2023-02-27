@@ -1,0 +1,757 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology/"
+     xml:base="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology">
+        <rdfs:comment xml:lang="ru">Использование графов знаний для построения игровых миров и поддержания логики развития сюжета игры</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#взаимодействует -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#взаимодействует">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Игрок"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Инвентарь"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Неигровой_персонаж"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Окружающая_среда"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Предмет"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Растение"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Существо"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#влияет -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#влияет">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Основное_задание"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Игровой_сюжет"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Окружающая_среда"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#выполняет -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#выполняет">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Игрок"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Задание"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#изменяет_состояние -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#изменяет_состояние">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Погодные_явления"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Артефакт"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Броня"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Оружие"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Предмет_интерьера"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Растение"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Существо"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Человек"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#меняет_статус -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#меняет_статус">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Задание"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Статус_игрока"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#расходует -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#расходует">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Существо"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Человек"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Расходуемый_предмет"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#хранит -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#хранит">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Инвентарь"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Предмет"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#экипирует -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#экипирует">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Человек"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Артефакт"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Броня"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Оружие"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Здоровье -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Здоровье">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Существо"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Идентификатор -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Идентификатор">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Задание"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Объект"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Событие"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Имя -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Имя">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Человек"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Количество -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Количество">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Предмет"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Наименование -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Наименование">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Предмет"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Растение"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Существо"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Описание -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Описание">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Задание"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Предмет"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Прочность -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Прочность">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Артефакт"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Броня"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Оружие"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Статус_на_задании -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Статус_на_задании">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Статус_игрока"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Тип -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Тип">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Объект"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Фамилия -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Фамилия">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Человек"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topDataProperty -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topDataProperty">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Задание"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Артефакт -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Артефакт">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Предмет"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Биом -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Биом">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Окружающая_среда"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Броня -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Броня">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Предмет"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Временные_события -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Временные_события">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Событие"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Второстепенное_задание -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Второстепенное_задание">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Задание"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Дерево -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Дерево">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Растение"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Животное -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Животное">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Существо"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Задание -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Задание">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Игровой_сюжет"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Игровой_мир -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Игровой_мир"/>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Игровой_сюжет -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Игровой_сюжет"/>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Игрок -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Игрок">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Человек"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Инвентарь -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Инвентарь">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Объект"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Кустарники -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Кустарники">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Растение"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Материал -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Материал">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Предмет"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Неигровой_персонаж -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Неигровой_персонаж">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Человек"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Объект -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Объект"/>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Окружающая_среда -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Окружающая_среда">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Игровой_мир"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Оружие -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Оружие">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Предмет"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Оружие_ближнего_боя -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Оружие_ближнего_боя">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Оружие"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Оружие_дальнего_боя -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Оружие_дальнего_боя">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Оружие"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Основное_задание -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Основное_задание">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Задание"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Погодные_явления -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Погодные_явления">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Временные_события"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Предмет -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Предмет">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Объект"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Предмет_интерьера -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Предмет_интерьера">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Предмет"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Растение -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Растение">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Объект"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Расходуемый_предмет -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Расходуемый_предмет">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Предмет"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Событие -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Событие"/>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Статус_игрока -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Статус_игрока">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Игровой_мир"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Существо -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Существо">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Объект"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Трава -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Трава">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Растение"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Человек -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Человек">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Объект"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Барбарис -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Барбарис">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Кустарники"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Берёза -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Берёза">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Дерево"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Главный_герой -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Главный_герой">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Игрок"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Гористая_местность -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Гористая_местность">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Биом"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Горы -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Горы">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Биом"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Гроза -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Гроза">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Погодные_явления"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Дерево -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Дерево">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Материал"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Деревянный_лук -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Деревянный_лук">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Оружие_ближнего_боя"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Дикий_кабан -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Дикий_кабан">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Животное"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Дождь -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Дождь">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Погодные_явления"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Дуб -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Дуб">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Дерево"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Еда -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Еда">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Расходуемый_предмет"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Железо -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Железо">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Материал"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Кольцо -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Кольцо">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Артефакт"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Лес -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Лес">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Биом"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Лиса -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Лиса">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Животное"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Меч -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Меч">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Оружие_дальнего_боя"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Нагрудник -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Нагрудник">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Броня"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Обувь -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Обувь">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Броня"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Одуванчик -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Одуванчик">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Трава"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Ожерелье -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Ожерелье">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Артефакт"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Поножи -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Поножи">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Броня"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Ромашка -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Ромашка">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Трава"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Снег -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Снег">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Погодные_явления"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Степи -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Степи">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Биом"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Стол -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Стол">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Предмет_интерьера"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Стрелы -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Стрелы">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Расходуемый_предмет"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Стул -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Стул">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Предмет_интерьера"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Топор -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Топор">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Оружие_дальнего_боя"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Шиповник -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Шиповник">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Кустарники"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Шлем -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Шлем">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andrey/ontologies/2023/1/game-ontology#Броня"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.24.2023-01-14T21:28:32Z) https://github.com/owlcs/owlapi -->
+
